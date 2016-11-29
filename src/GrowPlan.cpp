@@ -4,9 +4,9 @@
 // Constructor - creates a GrowPlan
 // and initializes the member variables and state
 GrowPlan::GrowPlan() :
-grow_plan_json("growplan", "JSON representation of the grow plan.")
+grow_schedule_json("grow_schedule", "JSON representation of the grow plan.")
 {
-	grow_plan_json.setDefaultValue("{}").setValidator([] (const char* candidate) {
+	grow_schedule_json.setDefaultValue("{}").setValidator([] (const char* candidate) {
 		if (candidate == NULL) {
 			return false;
 		}
@@ -25,7 +25,7 @@ void GrowPlan::loop() {
 
 String GrowPlan::read() {
 		// Todo Parse JSON and return struct?
-		return grow_plan_json.get();
+		return grow_schedule_json.get();
 }
 
 bool GrowPlan::refresh() {

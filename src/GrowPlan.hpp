@@ -5,7 +5,7 @@
 class GrowPlan
 {
 	private:
-		HomieSetting<const char*> grow_plan_json;
+		HomieSetting<const char*> grow_schedule_json;
   public:
     GrowPlan();
     void loop();
